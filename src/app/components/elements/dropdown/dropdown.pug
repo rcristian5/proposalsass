@@ -1,0 +1,5 @@
+div.ngbdropdown( ngbDropdown='', [placement]="position")
+	div( ngbDropdownToggle='', [ngClass]="{'mark-dropdown': mark}")
+		ng-content(select=".slot-toggle")
+	div(ngbDropdownMenu='')
+		ng-content(select=".slot-options")

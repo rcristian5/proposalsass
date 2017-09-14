@@ -1,0 +1,83 @@
+@import '../../../../styles/colors'
+
+.container-list
+	display: flex
+	flex-wrap: wrap
+	justify-content: space-between
+
+
+	.card-category
+		background-color: white
+		border-radius: 5px
+		box-shadow: 0 7px 13px 0 rgba( black , 0.04)
+		cursor: pointer
+		margin: 10px
+		overflow: hidden
+		padding: 20px
+		position: relative
+		width: 200px
+
+
+		.container
+			flex-direction: column
+			display: flex
+			align-items: center
+			transition: 0.4s all
+
+			i
+				font-size: 90px
+				transition: 0.3s all
+				z-index: 10
+
+
+			h2
+				font-size: 24px
+				font-weight: 100
+				margin: 5px 0
+				overflow: hidden
+				text-align: center
+				text-overflow: ellipsis
+				transition: 0.3s all
+				width 100%
+				z-index: 10
+
+		.container-hover
+			background: rgba( $color-gray-dark, 0.8)
+			color: white
+			border-radius: 50%
+			bottom: 20%
+			content: ''
+			left: 80%
+			position: absolute
+			right: 20%
+			top: 80%
+			transition: 0.4s all
+			transform: scale(0)
+			overflow: hidden
+			padding: 10px
+			font-size: 14px
+			font-weight: 100
+
+			h2
+				font-size: 20px
+				margin-bottom: 10px
+
+			p
+				line-height: 15px
+				margin-bottom: 10px
+
+
+		&:hover
+			.container
+				filter: blur(2px)
+
+			.container-hover
+				border-radius: 5px
+				position: absolute
+				border-radius: 0
+				bottom: 0
+				left: 0
+				right: 0
+				top: 0
+				transform: scale(1)
+

@@ -1,0 +1,53 @@
+.forms
+	h2 Formulario
+	.sections-form
+
+
+		.section-left
+
+			div.form-group
+				label(for="name") Nombre completo
+				input#name(type="text", placeholder="Jose Perez Perez", [(ngModel)]="user.name" )
+
+
+			div.form-group
+				label(for="name") Fecha de nacimiento
+				input(placeholder='yyyy-mm-dd', name='dp', [(ngModel)]='model', ngbDatepicker='', #d='ngbDatepicker', (click)='d.toggle()')
+
+
+			div.form-group
+				label(for="name") Email
+				input(type="email" placeholder="Email")
+
+
+			div.form-group
+				label(for="name") Tipo
+				selects( placeholder="Tipo", [options]="types" )
+
+
+			div.form-group
+				label(for="name") Password
+				input(type="password" placeholder="Password")
+
+			div.form-group
+				label(for="name") Confirmar password
+				input(type="password" placeholder="Confirmar password")
+
+		.section-right
+			div.form-group
+				label(for="name") Calle
+				input(type="text" placeholder="Calle")
+
+			div.form-group
+				label(for="name") Colonia
+				input(type="number" placeholder="Colonia")
+
+			div.form-group
+				label(for="name") Estado
+				input(type="email" placeholder="Estado")
+
+			div.form-group
+				label(for="name") Observación
+				textarea(cols="30", rows="10", placeholder="Observación")
+
+	button.button.primary.block( (click)="saveData()" ) Guardar

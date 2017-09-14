@@ -1,0 +1,15 @@
+loader( [show]="showLoader" )
+
+
+.modal-header
+	h4.modal-title Iniciar sesión
+
+
+.modal-body
+	input(type="text" placeholder="Nombre")
+	input(type="password" placeholder="Password")
+
+
+.modal-footer
+	button.button.outline(type='button', (click)="cancel()") Cancelar
+	button.button.primary.outline(type='button', (click)="login()") Iniciar sesión

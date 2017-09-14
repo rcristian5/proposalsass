@@ -1,0 +1,41 @@
+toast-container
+	#toast-container
+
+
+		.toast
+			animation-delay: 1s
+			animation-duration: 0.4s
+			animation-fill-mode: forwards
+			animation-name: opa
+			background-position: 10px 10px
+			box-shadow: 0 0 3px $color-gray-dark
+			padding: 10px 20px 10px 42px
+
+
+			&.toast-warning
+				background-color: #FDBC40
+
+
+			&:hover
+				animation-direction: reverse
+
+
+			.toast-close-button
+				right: -15px
+
+
+			.toast-title
+				font-size: 14px
+
+
+			.toast-message
+				font-size: 14px
+				font-weight: 100
+
+
+@keyframes opa
+	from
+		opacity: 9.5
+
+	to
+		opacity: 0.3

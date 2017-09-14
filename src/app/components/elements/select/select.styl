@@ -1,0 +1,95 @@
+@import '../../../../styles/colors'
+
+:host
+
+
+	.selects
+		position: relative
+		cursor: pointer
+
+
+		.dropdown-toggle
+			align-items: center
+			background: white
+			border-radius: 5px
+			border: 1px solid #e5edef
+			color: $color-gray-letter
+			display: flex
+			font-size: 14px
+			font-weight: 100
+			height: 40px
+			letter-spacing: 1px
+			outline: none
+			padding: 8px 12px
+
+
+			.placeholder
+				flex: 1
+
+
+			.material-icons
+				transition: 0.3s all
+
+
+			&:after
+				display: none
+
+
+			&.mark-dropdown
+
+
+				&:after
+					display: inline-block
+
+
+		.dropdown-menu
+			border-radius: 0 0 5px 5px
+			margin-top: -1px
+			padding: 0
+			right: 0
+
+
+			.option
+				align-items: center
+				border-bottom: 1px solid $color-gray-border
+				color: $color-gray-letter
+				cursor: pointer
+				display: flex
+				padding: 10px
+				position: relative
+
+
+				&:last-child
+					border-bottom: 0
+
+
+				*
+					padding: 0 5px
+
+
+				&:before
+					background: $color-primary
+					bottom: 0
+					content: ''
+					left: 0
+					position: absolute
+					top: 100%
+					transition: 0.3s all
+					width: 3px
+
+
+				&:hover
+
+
+					&:before
+						top 0
+
+		&.show
+
+
+			.dropdown-toggle
+				border-radius: 5px 5px 0 0
+
+
+			.material-icons
+				transform: rotateZ(180deg)

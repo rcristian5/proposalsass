@@ -1,0 +1,50 @@
+@import '../../../../styles/colors'
+
+:host
+	display: inline-block
+
+
+	.radio
+		align-items: center
+		cursor: pointer
+		display: flex
+		margin-right: 5px
+
+
+		.check
+			align-items: center
+			border-radius: 50%
+			border: 2px solid $color-gray-dark
+			display: inline-block
+			height 18px
+			position: relative
+			width: 18px
+
+
+			.circle
+				background: $color-secondary
+				border-radius: 50%
+				height 8px
+				left: 50%
+				margin-left: -4px
+				margin-top: -4px
+				position: absolute
+				top: 50%
+				transform: scale(0)
+				transition: 0.5s all
+				width: 8px
+
+
+			&.checked
+
+
+				.circle
+					transform: scale(1.4)
+
+
+		.label
+			color: $color-gray-letter
+			display: inline-block
+			margin-left: 8px
+
+

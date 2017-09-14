@@ -1,0 +1,32 @@
+ngb-pagination
+
+
+	.pagination
+		margin: 0
+
+
+		.page-item
+			margin: 0 5px
+
+
+			.page-link
+				align-items: center
+				background: transparent
+				border-radius: 50%
+				border: 0
+				color: $color-primary
+				display: flex
+				height: 35px
+				justify-content: center
+				width: 35px
+
+
+			&.active
+				.page-link
+					background: $color-primary
+					box-shadow: 0 7px 13px 0 rgba(black,0.04)
+					color: white
+
+
+			&.disabled
+				opacity: 0.3

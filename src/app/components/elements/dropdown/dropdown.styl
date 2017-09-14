@@ -1,0 +1,27 @@
+@import '../../../../styles/colors'
+
+:host
+
+
+	.ngbdropdown
+		display: inline-block
+
+
+		.dropdown-toggle
+			align-items: center
+			cursor: pointer
+			display: flex
+
+
+			&:after
+				display: none
+
+
+			&.mark-dropdown
+				&:after
+					display: inline-block
+
+
+		.dropdown-menu
+			border-radius: 5px
+			padding: 0

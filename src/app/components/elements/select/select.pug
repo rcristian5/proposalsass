@@ -1,0 +1,6 @@
+div.selects( ngbDropdown='', [placement]="position")
+	div( ngbDropdownToggle='', [ngClass]="{'mark-dropdown': mark}")
+		span.placeholder {{ (selectedOption && selectedOption.label) || placeholder}}
+		i.material-icons keyboard_arrow_down
+	div(ngbDropdownMenu='')
+		div.option( *ngFor="let option of options", (click)="selectOption(option)") {{option.label}}

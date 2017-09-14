@@ -1,0 +1,63 @@
+@import '../../../../styles/colors'
+
+
+.nav-top
+	background: white
+	border-bottom: 1px solid $color-gray-border
+	box-sizing: border-box
+	color: white
+	display: flex
+	flex-direction: row
+	padding: 8px
+	align-items: center
+
+
+	.icon
+		background-image: url('https://assets.cdnpandadoc.com/app/uploads/templates/2016/10/logo_web.png')
+		background-position: center
+		background-repeat: no-repeat
+		background-size: 50px 50px
+		height: 50px
+		margin: 0 10px 0 10px
+		width: 50px
+
+
+	.list-menu
+		align-items: center
+		display: flex
+		flex: 1
+		margin: 0
+		padding: 0
+
+
+		.item-menu
+			color: $color-gray-letter
+			cursor: pointer
+			font-weight: 100
+			list-style: none
+			padding: 15px
+			text-align: center
+			font-size: 14px
+			outline: none
+
+			&.active
+				font-weight: bold
+				color: $color-primary
+
+
+			&:hover
+				color: $color-primary
+
+
+.toolbar-top
+	align-content: center
+	background: white
+	border-bottom: 1px solid $color-gray-border
+	box-sizing: border-box
+	display: flex
+	justify-content: flex-end
+	padding: 10px
+
+
+.view
+	padding: 30px

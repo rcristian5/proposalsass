@@ -1,0 +1,44 @@
+
+.ngbdropdown
+
+
+	.dropdown-menu
+
+
+		.slot-options
+
+
+			.item
+				align-items: center
+				border-bottom: 1px solid $color-gray-border
+				color: $color-gray-letter
+				cursor: pointer
+				display: flex
+				padding: 10px
+				position: relative
+
+
+				&:last-child
+					border-bottom: 0
+
+
+				*
+					padding: 0 5px
+
+
+				&:before
+					background: $color-primary
+					bottom: 0
+					content: ''
+					left: 0
+					position: absolute
+					top: 100%
+					transition: 0.3s all
+					width: 3px
+
+
+				&:hover
+
+
+					&:before
+						top 0

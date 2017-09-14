@@ -1,0 +1,13 @@
+nav.nav-top
+	.icon
+	ul.list-menu
+		li.item-menu(routerLink="/dashboard", routerLinkActive="active") Dashboard
+		li.item-menu(routerLink="/form", routerLinkActive="active") Formulario
+		li.item-menu(routerLink="/table", routerLinkActive="active") Tabla
+	button.button.primary.outline( (click)="login()" ) Iniciar sesion
+
+nav.toolbar-top
+	search
+
+.view
+	router-outlet

@@ -1,0 +1,34 @@
+.search( ngbDropdown='' )
+
+	input(type="text" placeholder="Buscar...", [(ngModel)]="value", [ngClass]="{'contract': value === ''}")
+
+	i.material-icons( ngbDropdownToggle='' ) keyboard_arrow_down
+
+	div.button-search
+		i.material-icons search
+
+	div(ngbDropdownMenu='')
+
+		.form-group
+			label Nombre
+			input( type="text" placeholder="Nombres" )
+		.form-group
+			label Apellido
+			input( type="text" placeholder="Nombres" )
+		.form-group
+			label Tipo
+			selects( placeholcer="hole", [options]="[{label: 'Activo'}, {label: 'Inactivo'}]" )
+
+		.form-group
+			div
+				checkbox( label="Numero", [checked]="checked", (click)="checked = !checked" )
+			div
+				checkbox( label="Letras", [checked]="checked1", (click)="checked1 = !checked1" )
+
+		.form-group
+			radio( label="Hombre", [checked]="radio === 1" ,(click)="radio = 1" )
+			radio( label="Mujer", [checked]="radio === 2" ,(click)="radio = 2" )
+
+
+
+

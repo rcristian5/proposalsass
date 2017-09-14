@@ -1,0 +1,47 @@
+@import '../../../../styles/colors'
+
+:host
+
+	.checkbox
+		cursor: pointer
+		display: inline-block
+
+
+		.check
+			position: relative
+
+
+			&:before
+				border: 2px solid $color-gray-dark
+				content: ""
+				height: 16px
+				left: 0
+				position: absolute
+				top: 3px
+				transition: all .2s ease-in-out
+				width: 16px
+				z-index: 1
+				border-radius: 3px
+
+
+			&.checked
+
+
+				&:before
+					border-radius: 0
+					border-color: $color-secondary
+					border-right-style: none
+					border-top-style: none
+					height: 7px
+					transform: rotate(-45deg)
+
+
+		.label
+			margin-left: 20px
+			color: $color-gray-letter
+
+
+
+
+
+
