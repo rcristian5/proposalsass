@@ -7,7 +7,38 @@ nav.nav-top
 	button.button.primary.outline( (click)="login()" ) Iniciar sesion
 
 nav.toolbar-top
-	search
+
+	search( [list]="arrarListApp", (onFilter)="onFilter($event)", filter="name,lastname" )
+		ng-template( let-context="" )
+
+			p name: {{context.field.name}}
+
+			.form-group
+				label Nombre
+				input( type="text", placeholder="Nombres", [(ngModel)]="context.field.name" )
+			.form-group
+				label Apellido
+				input( type="text", placeholder="Nombres", [(ngModel)]="context.field.lastname")
+			.form-group
+				label Tipo
+				selects( placeholcer="hole", [options]="[{label: 'Activo'}, {label: 'Inactivo'}]" )
+
+			.form-group
+				div
+					checkbox( label="Numero", [checked]="checked", (click)="checked = !checked" )
+				div
+					checkbox( label="Letras", [checked]="checked1", (click)="checked1 = !checked1" )
+
+			.form-group
+				radio( label="Hombre", [checked]="radio === 1" ,(click)="radio = 1" )
+				radio( label="Mujer", [checked]="radio === 2" ,(click)="radio = 2" )
+
+			button.button.primary.outline.block( (click)="context.filter()" ) Hola
+
+
+
+
+
 
 .view
 	router-outlet

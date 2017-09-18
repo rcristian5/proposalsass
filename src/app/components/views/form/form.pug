@@ -22,7 +22,7 @@
 
 			div.form-group
 				label(for="name") Tipo
-				selects( placeholder="Tipo", [options]="types" )
+				selects( placeholder="Tipo", [options]="types", (onChange)="changeSelect($event)" )
 
 
 			div.form-group

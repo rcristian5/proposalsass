@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core'
+import { Component, Input, Output, EventEmitter } from '@angular/core'
 import { NgbDropdownConfig } from '@ng-bootstrap/ng-bootstrap'
 
 
@@ -19,6 +19,8 @@ export class SelectComponent {
 	@Input('position') position: string = 'bottom-left'
 	@Input('placeholder') placeholder: string = 'Selecciona...'
 	@Input('options') options: Array<object> = []
+	@Output('onChange') onChange: EventEmitter<any> = new EventEmitter()
+
 
 
 	constructor( private config: NgbDropdownConfig ) {
@@ -29,6 +31,7 @@ export class SelectComponent {
 
 	selectOption ( _option: object ): void {
 		this.selectedOption = _option
+		this.onChange.emit( _option )
 	}
 
 }

@@ -15,7 +15,7 @@ export class FormComponent {
 
 	user: any = {}
 	types: Array<object> = [
-		{ label: 'Masculino' },
+		{ label: 'Masculino', name: 'hey name', id: 'hey id' },
 		{ label: 'Femenino' }
 	]
 
@@ -38,6 +38,11 @@ export class FormComponent {
 			showCloseButton: true,
 			animate: 'flyLeft'
 		})
+	}
+
+
+	changeSelect ( _$event ): void {
+		console.log( _$event )
 	}
 
 }

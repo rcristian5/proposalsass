@@ -13,6 +13,7 @@ import { DropdownComponent } from '../components/elements/dropdown/dropdown'
 import { SelectComponent } from '../components/elements/select/select'
 import { CheckboxComponent } from '../components/elements/checkbox/checkbox'
 import { RadioComponent } from '../components/elements/radio/radio'
+import { FilterPipe } from '../pipes/filter'
 
 const appRoutes: Routes = [
 	{ path: 'form', component: FormComponent },
@@ -32,7 +33,8 @@ const appRoutes: Routes = [
 		SelectComponent,
 		DropdownComponent,
 		CheckboxComponent,
-		RadioComponent
+		RadioComponent,
+		FilterPipe
 	],
 	imports: [
 		FormsModule,
@@ -47,6 +49,7 @@ const appRoutes: Routes = [
 		SelectComponent,
 		CheckboxComponent,
 		RadioComponent,
+		FilterPipe
 	]
 })
 

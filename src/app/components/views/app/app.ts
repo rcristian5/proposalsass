@@ -13,6 +13,15 @@ import { ConfirmModalComponent } from '../../modals/confirm/confirm'
 
 export class AppComponent {
 	title = 'app'
+	arrarListApp = [
+		{ name: 'Cristian', lastname: 'Ramirez', live: true},
+		{ name: 'Antoni', lastname: 'Shilon'}
+	]
+
+	exampleContext = {
+		$implicit: 'default context property when none specified',
+		aContextProperty: 'a context property'
+	};
 
 
 
@@ -29,11 +38,20 @@ export class AppComponent {
 				backdrop: true,
 				windowClass: 'animation'
 			})
-			// .componentInstance.name = 'World'
+	}
+
+	onFilter ( _arrayfilted ): void {
+		console.log( 'lista filtrada' )
+		console.log(_arrayfilted)
 	}
 
 
 	showModal (): void {
 		console.log('show modal')
+	}
+
+
+	greet (): void {
+		console.log('hello from  app')
 	}
 }

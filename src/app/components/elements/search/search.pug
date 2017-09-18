@@ -1,33 +1,17 @@
 .search( ngbDropdown='' )
 
-	input(type="text" placeholder="Buscar...", [(ngModel)]="value", [ngClass]="{'contract': value === ''}")
+	input(type="text" placeholder="Buscar...", [(ngModel)]="templateContext.$implicit.field.main", [ngClass]="{'contract': templateContext.$implicit.field.main === ''}", (ngModelChange)="filterByMainField($event)")
 
-	i.material-icons( ngbDropdownToggle='' ) keyboard_arrow_down
+	i.material-icons( ngbDropdownToggle='', *ngIf="templateRef" ) keyboard_arrow_down
 
 	div.button-search
 		i.material-icons search
 
-	div(ngbDropdownMenu='')
+	div(ngbDropdownMenu='', *ngIf="templateRef")
 
-		.form-group
-			label Nombre
-			input( type="text" placeholder="Nombres" )
-		.form-group
-			label Apellido
-			input( type="text" placeholder="Nombres" )
-		.form-group
-			label Tipo
-			selects( placeholcer="hole", [options]="[{label: 'Activo'}, {label: 'Inactivo'}]" )
+		ng-container( *ngTemplateOutlet="templateRef; context: templateContext" )
 
-		.form-group
-			div
-				checkbox( label="Numero", [checked]="checked", (click)="checked = !checked" )
-			div
-				checkbox( label="Letras", [checked]="checked1", (click)="checked1 = !checked1" )
 
-		.form-group
-			radio( label="Hombre", [checked]="radio === 1" ,(click)="radio = 1" )
-			radio( label="Mujer", [checked]="radio === 2" ,(click)="radio = 2" )
 
 
 
